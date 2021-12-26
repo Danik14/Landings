@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+ul,
+ol,
+li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav {
+  padding: 50px 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+li {
+  display: inline-block;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: space-around;
+  width: 35%;
+}
+
+.btn-nav {
+  cursor: pointer;
+}
+
+.header {
+  background-image: url("./rest1.jpg");
+  background-size: cover; /* <------ */
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding-bottom: 330px;
+  overflow: hidden;
+  position: relative;
+}
+
+.header:after {
+  content: "";
+  position: absolute;
+  top: 87.5%;
+  left: 0;
+  height: 100%;
+  width: 150%;
+  background: #fff;
+  -webkit-transform: rotate(-6deg);
+  -moz-transform: rotate(-6deg);
+  transform: rotate(-6deg);
+}
+
+.slider {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  align-items: center;
+  margin: 250px 0 70px 0;
+  color: #fff;
+}
+
+.btn-slider {
+  border: 2px solid #fff;
+  padding: 15px;
+  font-size: 18px;
+  background: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.slider-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+}
+
+.slider h1 {
+  font-size: 70px;
+  margin: 0;
+  padding: 0;
+}
+
+.arrow {
+  cursor: pointer;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
