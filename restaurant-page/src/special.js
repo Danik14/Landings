@@ -17,39 +17,28 @@ function text() {
   return text;
 }
 
+function picture() {}
+
 function pictures() {
   const pictures = document.createElement("div");
   pictures.classList.add("special-pictures");
   const picturesList = document.createElement("ul");
-  let picturesArray = [];
   for (let i = 0; i < 3; i++) {
     const picture = document.createElement("div");
+    const h1 = document.createElement("h1");
+    const p = document.createElement("p");
+    h1.innerHTML = "$12.59";
+    p.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipisicing elit.";
     picture.classList.add("special-pic");
     picture.classList.add("spic" + (i + 1));
-    picturesArray.push(picture);
+    picture.appendChild(h1);
+    picture.appendChild(p);
     const li = document.createElement("li");
     li.appendChild(picture);
     picturesList.appendChild(li);
   }
 
-  let h1 = document.createElement("h1");
-  let p = document.createElement("p");
-  h1.innerHTML = "$12.59";
-  p.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipisicing elit.";
-  picturesArray[0].appendChild(h1);
-  picturesArray[0].appendChild(p);
-
-  h1.innerHTML = "$12.59";
-  p.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipisicing elit.";
-  picturesArray[1].appendChild(h1);
-  picturesArray[1].appendChild(p);
-
-  h1.innerHTML = "$12.59";
-  p.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipisicing elit.";
-  picturesArray[2].appendChild(h1);
-  picturesArray[2].appendChild(p);
   pictures.appendChild(picturesList);
-
   return pictures;
 }
 

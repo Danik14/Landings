@@ -24,6 +24,7 @@ li {
 }
 
 h1,
+h2,
 p {
   margin: 0;
 }
@@ -236,6 +237,25 @@ hr {
   align-items: center;
   flex-flow: column wrap;
   gap: 30px;
+  background-size: cover; /* <------ */
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding-bottom: 330px;
+  overflow: hidden;
+  position: relative;
+}
+
+.special:after {
+  content: "";
+  position: absolute;
+  top: 87.5%;
+  left: 0;
+  height: 100%;
+  width: 150%;
+  background: #f8f9fa;
+  -webkit-transform: rotate(-6deg);
+  -moz-transform: rotate(-6deg);
+  transform: rotate(-6deg);
 }
 
 .special-pictures ul {
@@ -256,6 +276,40 @@ hr {
   justify-content: center;
   align-items: center;
   flex-flow: column wrap;
+  color: #fff;
+  padding: 0 30px;
+  gap: 15px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.special-pictures ul li:hover .special-pic,
+.special-pictures ul li:focus .special-pic {
+  -ms-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+  zoom: 1.03;
+}
+
+.special-pictures ul li {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.special-pic h1 {
+  font-size: 40px;
+}
+
+.special-pic p {
+  font-size: 20px;
 }
 
 .spic1 {
@@ -268,4 +322,30 @@ hr {
 
 .spic3 {
   background-image: url("./special3.jpg");
+}
+
+.menu {
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  gap: 30px;
+}
+
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.menu-item {
+  width: 260px;
+  height: 260px;
+  border: 2px solid red;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 }
