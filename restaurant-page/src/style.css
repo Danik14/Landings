@@ -176,7 +176,7 @@ li {
 
 hr {
   border-top: 2px solid green;
-  width: 15%;
+  width: 25%;
 }
 
 .info {
@@ -227,4 +227,45 @@ hr {
   width: 350px;
   height: 543px;
   margin: 14px;
+}
+
+.special {
+  margin-top: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: column wrap;
+  gap: 30px;
+}
+
+.special-pictures ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-flow: row wrap;
+}
+
+.special-pic {
+  width: 430px;
+  height: 690px;
+  background-size: cover; /* <------ */
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+}
+
+.spic1 {
+  background-image: url("./special1.jpg");
+}
+
+.spic2 {
+  background-image: url("./special2.jpg");
+}
+
+.spic3 {
+  background-image: url("./special3.jpg");
 }

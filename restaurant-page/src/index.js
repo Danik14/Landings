@@ -1,4 +1,4 @@
-import Home from "./home";
+import Special from "./special";
 import Header from "./header";
 import Brief from "./brief";
 import About from "./about";
@@ -10,6 +10,7 @@ function Restaurant() {
   body.appendChild(Header());
   body.appendChild(Brief());
   body.appendChild(About());
+  body.append(Special());
 }
 
 Restaurant();
